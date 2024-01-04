@@ -16,7 +16,7 @@ public class BaseClass {
 //different browser has it own driver.... chrome driver, firefox driver( gecko driver)
 // IE driver , opera driver ,safari driver, edge driver
     public void loadProperties()throws IOException {
-        FileInputStream obj = new FileInputStream("C:\\Users\\Owner\\IdeaProjects\\sadiaBatch7\\src\\test\\java\\info.properties");
+        FileInputStream obj = new FileInputStream("C:\\Users\\Owner\\IdeaProjects\\sadiaBatch7\\src\\test\\java\\com\\Upright\\Utility\\info.properties");
 
         Properties prof = new Properties();
         prof.load(obj);
@@ -47,8 +47,9 @@ public class BaseClass {
 // driver = new FirefoxDriver();
 //driver.get("http://uprightforum.tech");
 
-        driver.navigate().to("https://uprightforum.tech");
-        driver.navigate().to("https://netflix.com");
+       driver.navigate().to("https://uprightforum.tech");
+       driver.navigate().to("https://amazon.com");
+        driver.navigate().to("http://sadiahera.click/");
         Thread.sleep(3000);
 // driver.manage().window().maximize();
         driver.navigate().back();
