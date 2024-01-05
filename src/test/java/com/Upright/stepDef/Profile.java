@@ -5,11 +5,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class Profile {
     WebDriver driver;
     String myTitle;
-    String myBrowser;
+    String myURL;
 
 
     @Given("the profile link is loaded in the browser")
@@ -27,28 +28,31 @@ public class Profile {
 
    }
 
-    @Then("the title should be something meaningful")
-    public void the_title_should_be_something_meaningful(){
-        if(myTitle.equalsIgnoreCase("Sadia's Profile")){
-            System.out.println("The title is meaningful");
-        }
-        else{
-            System.out.println("The title is not meaningful");
-        }
+    @Then("the title should be Sadia's Profile")
+    public void the_title_should_be_Sadias_Profile(){
+      //  if(myTitle.equalsIgnoreCase("Sadia Profile")){
+           // System.out.println("The title is as per A/C");
+      //  }
+       // else{
+       //     System.out.println("The title is not as per A/C");
+      //  }
+
+        Assert.assertEquals(myTitle, "Sadia's Profile");
 
 
 
     }
    @ When ("user capture the url")
     public void user_capture_the_url(){
-       driver.get("http://sadiahera.click");
+       myURL = driver.getCurrentUrl();
+       System.out.println("the Url capture by the Selenium is" + myURL);
 
 
    }
 
-    @Then ("the url should be as expected")
-    public void the_url_should_be_as_expected(){
-        System.out.println("The url should be expected");
+    @Then ("the url should be with http and the name")
+    public void the_url_should_be_with_http_and_the_name(){
+        Assert.assertEquals(myURL,"http://sadiahera.click/" );
 
 
     }
