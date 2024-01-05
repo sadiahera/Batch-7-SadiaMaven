@@ -9,15 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Profile {
     WebDriver driver;
     String myTitle;
+    String myBrowser;
 
-    @Given ("the profile link is loaded in the browser")
-    public void the_profile_link_is_loaded_in_the_browser(){
+
+    @Given("the profile link is loaded in the browser")
+    public void the_profile_link_is_loaded_in_the_browser() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Owner\\OneDrive\\Documents\\chromedriver.exe");
 
         driver = new ChromeDriver(); //open the chrome browser
         driver.get("http://sadiahera.click");
-
     }
+
 
    @When ("user take capture the title")
     public void user_take_capture_the_title(){
@@ -39,11 +41,15 @@ public class Profile {
     }
    @ When ("user capture the url")
     public void user_capture_the_url(){
+       driver.get("http://sadiahera.click");
+
 
    }
 
     @Then ("the url should be as expected")
     public void the_url_should_be_as_expected(){
+        System.out.println("The url should be expected");
+
 
     }
 
@@ -54,7 +60,7 @@ public class Profile {
 
    @Then ("the input box should be expected")
     public void the_input_box_should_be_expected(){
-        
+
    }
 
 }

@@ -31,7 +31,7 @@ public class BaseClass {
 
     public void lauchBrowser() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Owner\\OneDrive\\Documents\\chromedriver.exe");
-        System.setProperty("webdriver.gecho.driver","C:/Users/mohim/Downloads/geckodriver-v0.33.0-win64/gechodriver");
+        System.setProperty("webdriver.gecho.driver","C:/Users/Owner/Downloads/geckodriver-v0.33.0-win64/gechodriver");
 
         if (myBrowser.equals("chrome")){
             driver = new ChromeDriver();
