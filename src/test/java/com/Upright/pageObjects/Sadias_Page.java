@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.asserts.SoftAssert;
 
+import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class Sadias_Page {
@@ -32,6 +33,7 @@ public class Sadias_Page {
      */
 
     WebDriver driver;
+    WebElement travel;
 @Test
     public void browser() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver",
@@ -123,6 +125,21 @@ public class Sadias_Page {
     driver.findElement(By.linkText("linked")).click();
 
     Thread.sleep(10000);
+
+    try {
+        travel = driver.findElement(By.xpath("//input[@value ='travelling']"));
+
+    }
+    catch (Exception e) {
+        System.out.println(e);
+    }
+    finally {
+        System.out.println("Finally");
+    }
+
+    //List<WebElement> reading = driver.findElement(By.xpath("//input[@name= 'hobby']"));
+   // reading.get(0).click();
+    //reading.get(1).click();
 
         /*driver.close(); //driver.close will close only current window / tab
     even through it open another window/tab. and also it won't clear the background process. */
