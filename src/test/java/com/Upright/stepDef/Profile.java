@@ -1,4 +1,4 @@
-package com.Upright.stepDef;
+package com.Upright.stepDef.Cucumber;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
