@@ -6,9 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class BasicTestNG {
+public class BaseClass {
 
     WebDriver driver;
+
+    public static WebDriver getDriver() {
+        return null;
+    }
 
     @Parameter(names = "myBrowser")
     @Test

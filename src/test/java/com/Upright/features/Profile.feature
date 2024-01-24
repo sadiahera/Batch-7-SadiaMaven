@@ -11,6 +11,7 @@ Feature: Verifying the profile web application
         When user capture the url
         Then the url should be with http and the name
 
-        Scenario:TC-103-Verify
-          When user can write in the input box
-          Then the input box should be expected
+        Scenario:TC-103-Inserting Project Management Tools
+          When user get the input box
+          Then the user  should be able to type the tool name
+

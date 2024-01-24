@@ -7,12 +7,27 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class Sadias_Page {
+    public Sadias_Page(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver,this);
+
+
+    }
+
+    @FindBy(xpath ="//input[@ id = 'Project management tool']" )
+            WebElement projectInputBox;
+    public void Projectmanagementool(){
+        projectInputBox.sendKeys("JIRA");
+    }
+
     /*
     There are two types of exception
     1.Implicitly wait:it will wait a certain period(second) before throwing an exception during runtime
@@ -29,6 +44,13 @@ public class Sadias_Page {
     2.Relative xpath--It starts from anywhere in the document and starts with // (double slash)
 
     Syntax- //tagname[@attribute ='value']
+
+    1.Constructor
+    2.Page objects
+    3.Method according to action
+
+    //Page factory class from Selenium-- this class will remember all the page elements and will
+    transfer those to the step def class
 
      */
 

@@ -24,7 +24,7 @@ public class ExceptionsPractice {
         System.out.println(4+4);
         System.out.println(5+6);
 
-        FileInputStream fs=new FileInputStream("src/test/java/info.properties");
+        FileInputStream fs=new FileInputStream("src/test/java/env.properties");
         int number = fs.available();
         System.out.println(number);
     }
